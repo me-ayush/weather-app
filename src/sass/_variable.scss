@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+);
+
+@mixin d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin font-s {
+    font-family: 'Klee One', cursive;
+}
+
+@function set-weight($weight-n){
+    @return map-get($font-weights, $weight-n);
+}
